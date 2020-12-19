@@ -11,11 +11,11 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "docker-test"
-  env: "DockerTest-env"
+  app: "docker"
+  env: "Docker-env"
   bucket_name: "elasticbeanstalk-us-east-1-675801125365"
-  bucket_path: "docker-test"
+  bucket_path: "docker"
   on:
     branch: master
-  access_key_id: "$MY_KK"
+  access_key_id: $MY_KK
   secret_access_key: "$MY_SECRET"
