@@ -18,4 +18,5 @@ deploy:
   on:
     branch: master
     access_key_id: $MY_KK
-    secret_access_key: "MY_SECRET"
+    secret_access_key:
+      secret: "MY_SECRET"
