@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run -e CI=true guoguo1/cicd npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-test"
+  env: "DockerTest-env"
+  bucket_name: "elasticbeanstalk-us-east-1-675801125365"
+  bucket_path: "docker-test"
+  on:
+    branch: master
+    access_key_id: $MY_KK
+    secret_access_key: "MY_SECRET"
